@@ -1,14 +1,33 @@
 .team {
+	min-width: 480px;
 	background-color: var(--secondary-background-color);
 
 	&__list {
-		display: flex;
-		align-items: center;
+		@media screen and (min-width: $tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -15px;
+		}
+
+		@media screen and (min-width: $desktop) {
+			display: flex;
+			align-items: center;
+			margin-top: 50px;
+			margin: -15px;
+		}
+	}
+
+	&__img {
+		width: 100%;
 	}
 
 	&__card {
 		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-bottom: 24px;
+
+		@media screen and (min-width: $desktop) {
+			padding-bottom: 30px;
+		}
 	}
 
 	&__name {
@@ -30,10 +49,19 @@
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 	background-color: #ffffff;
-	margin-right: 30px;
 
-	&--margin {
-		margin-right: 0;
+	width: 450px;
+	margin-top: 30px;
+
+	@media screen and (min-width: $tablet) {
+		flex-basis: calc(100% / 2 - 30px);
+		margin: 15px;
+	}
+	@media screen and (min-width: $desktop) {
+		flex-basis: calc(100% / 4 - 30px);
+		width: 270px;
+		margin-top: 0;
+		margin: 15px;
 	}
 }
 

@@ -1,15 +1,18 @@
 .clients__list {
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
+	margin: -15px;
 }
 
 .clients__item {
-	width: 170px;
-	height: 92px;
-	margin-left: 30px;
+	flex-basis: calc(100% / 2 - 30px);
+	margin: 15px;
 
-	&--margin {
-		margin-left: 0;
+	@media screen and (min-width: $tablet) {
+		flex-basis: calc(100% / 3 - 30px);
+	}
+	@media screen and (min-width: $desktop) {
+		flex-basis: calc(100% / 6 - 30px);
 	}
 }
 
