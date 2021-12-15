@@ -408,7 +408,6 @@ body {
   .advantage__item {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
         flex-basis: calc(100% / 4 - 30px);
-    width: 270px;
     margin: 15px;
   }
 }

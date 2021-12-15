@@ -1,8 +1,20 @@
 .filter {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
-	margin-bottom: 50px;
+
+	margin-right: -8px;
+	margin-top: -15px;
+	margin-bottom: 40px;
+
+	@media screen and (min-width: $tablet) {
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 50px;
+	}
 }
 
 .filter__button {
@@ -11,6 +23,7 @@
 	background-color: var(--secondary-background-color);
 	color: var(--primery-text-color);
 	font-weight: 500;
+	font-size: 16px;
 	line-height: 1.62;
 
 	transition: color var(--transition-duration) var(--timing-function),
@@ -27,27 +40,49 @@
 
 .filter__item {
 	margin-right: 8px;
+	margin-top: 15px;
+}
 
-	&--margin {
-		margin-right: 0;
+.projects {
+	width: 100%;
+	margin-bottom: -30px;
+
+	&__item {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.projects {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.projects__item {
+		box-sizing: border-box;
+		width: 354px;
+	}
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+	.projects__item:not(:nth-child(2n)) {
+		margin-right: 30px;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.projects__item {
+		width: 370px;
+	}
+	.projects__item:not(:nth-child(3n)) {
+		margin-right: 30px;
 	}
 }
 
 .projects {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	margin-right: -30px;
-	margin-bottom: -30px;
-
-	&__item {
-		width: 370px;
-		box-sizing: border-box;
-		margin-right: 30px;
-		margin-bottom: 30px;
-		flex-basis: calc(100% / 3 - 30px);
+	&__img {
+		width: 100%;
 	}
-
 	&__data {
 		padding: 20px 24px;
 		border-left: 1px solid #eeeeee;
@@ -73,6 +108,12 @@
 	&__thumb {
 		position: relative;
 		overflow: hidden;
+	}
+}
+
+.projects__data--height {
+	@media screen and (min-width: $tablet) and (max-width: 1199px) {
+		height: 146px;
 	}
 }
 
