@@ -1,23 +1,29 @@
 .page-footer {
-	padding: 60px 15px;
 	background-color: var(--footer-background-color);
 
 	&__container {
-		display: flex;
-		align-items: baseline;
+		padding: 60px 15px;
+		// @media screen and (min-width: $tablet) {
+		// 	display: flex;
+		// 	align-items: baseline;
+		// }
 	}
 
 	/* -----LOGO----- */
 	&__logo {
 		padding: 0;
-		margin-right: 0;
 		margin-bottom: 20px;
 		color: var(--third-text-color);
+		// @media screen and (max-width: 767px) {
+		//
+		// }
+		// margin-right: 0;
 	}
 }
 
 /* -----address----- */
 .address__link {
+	margin-bottom: 8px;
 	color: var(--third-text-color);
 	font-style: normal;
 	font-size: 14px;
@@ -29,13 +35,14 @@
 	&:hover {
 		color: var(--accent-color);
 	}
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 9px;
+	}
 }
 
-/* -----CONTACTS----- */
+// /* -----CONTACTS----- */
 
-.footer-contacts {
-	margin-top: 9px;
-
+.footer-contacts__item {
 	&__item {
 		margin-bottom: 9px;
 	}
@@ -57,7 +64,7 @@
 	}
 }
 
-/* -----NETWORK----- */
+// /* -----NETWORK----- */
 .network {
 	margin-left: 70px;
 
@@ -112,13 +119,13 @@
 	}
 }
 
-/* ----- FORM FOLLOW----- */
+// /* ----- FORM FOLLOW----- */
 
 .follow {
 	margin-left: auto;
 
 	&__form {
-		display: flex;
+		// display: flex;
 		margin-top: 20px;
 	}
 

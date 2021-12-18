@@ -712,29 +712,23 @@ body {
 }
 
 .page-footer {
-  padding: 60px 15px;
   background-color: var(--footer-background-color);
   /* -----LOGO----- */
 }
 
 .page-footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  padding: 60px 15px;
 }
 
 .page-footer__logo {
   padding: 0;
-  margin-right: 0;
   margin-bottom: 20px;
   color: var(--third-text-color);
 }
 
 /* -----address----- */
 .address__link {
+  margin-bottom: 8px;
   color: var(--third-text-color);
   font-style: normal;
   font-size: 14px;
@@ -747,16 +741,17 @@ body {
   color: var(--accent-color);
 }
 
-/* -----CONTACTS----- */
-.footer-contacts {
-  margin-top: 9px;
+@media screen and (min-width: 1200px) {
+  .address__link {
+    margin-bottom: 9px;
+  }
 }
 
-.footer-contacts__item {
+.footer-contacts__item__item {
   margin-bottom: 9px;
 }
 
-.footer-contacts__item--margin {
+.footer-contacts__item__item--margin {
   margin-bottom: 0;
 }
 
@@ -772,7 +767,6 @@ body {
   color: var(--accent-color);
 }
 
-/* -----NETWORK----- */
 .network {
   margin-left: 70px;
 }
@@ -833,15 +827,11 @@ body {
   color: var(--third-text-color);
 }
 
-/* ----- FORM FOLLOW----- */
 .follow {
   margin-left: auto;
 }
 
 .follow__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 20px;
 }
 
