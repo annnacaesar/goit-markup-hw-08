@@ -339,7 +339,7 @@ body {
   transition: color var(--transition-duration) var(--timing-function);
 }
 
-.site-nav__link:focus {
+.site-nav__link:focus, .site-nav__link:hover {
   color: var(--accent-color);
 }
 
@@ -406,6 +406,32 @@ body {
 @media screen and (min-width: 1200px) {
   .contacts__icon {
     margin-right: 10px;
+  }
+}
+
+.contacts__icon {
+  width: 14px;
+  height: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contacts__icon--tel {
+  width: 10px;
+  height: 14px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon--tel {
+    height: 16px;
   }
 }
 

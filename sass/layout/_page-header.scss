@@ -108,7 +108,8 @@
 
 	transition: color var(--transition-duration) var(--timing-function);
 
-	&:focus {
+	&:focus,
+	&:hover {
 		color: var(--accent-color);
 	}
 
@@ -161,6 +162,25 @@
 
 	@media screen and (min-width: $desktop) {
 		margin-right: 10px;
+	}
+}
+.contacts__icon {
+	width: 14px;
+	height: 10px;
+	align-items: center;
+
+	@media screen and (min-width: $desktop) {
+		width: 16px;
+		height: 12px;
+	}
+}
+
+.contacts__icon--tel {
+	width: 10px;
+	height: 14px;
+
+	@media screen and (min-width: $desktop) {
+		height: 16px;
 	}
 }
 
