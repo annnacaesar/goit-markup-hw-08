@@ -15,6 +15,8 @@
 
 .menu {
 	flex-grow: 1;
+	z-index: 5;
+
 	@media screen and (max-width: 767px) {
 		display: none;
 		position: fixed;
@@ -29,11 +31,20 @@
 
 		&.is-open {
 			display: block;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 	}
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		align-items: center;
+	}
+}
+
+.menu__container {
+	@media screen and (min-width: $tablet) {
+		margin-left: auto;
 	}
 }
 
@@ -63,10 +74,6 @@
 }
 
 .site-nav__list {
-	@media screen and (max-width: 767px) {
-		margin-bottom: 302px;
-	}
-
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		align-items: center;
@@ -136,13 +143,10 @@
 		flex-direction: column-reverse;
 		margin-bottom: 64px;
 	}
-	@media screen and (min-width: $tablet) and (max-width: 1199px) {
-		margin-left: auto;
-	}
+
 	@media screen and (min-width: $desktop) {
 		display: flex;
 		align-items: center;
-		margin-left: auto;
 	}
 }
 
@@ -168,10 +172,9 @@
 		@media screen and (min-width: $tablet) and (max-width: 1199px) {
 			margin-bottom: 10px;
 		}
-	}
-
-	@media screen and (min-width: $desktop) {
-		margin-right: 30px;
+		@media screen and (min-width: $desktop) {
+			margin-right: 30px;
+		}
 	}
 }
 

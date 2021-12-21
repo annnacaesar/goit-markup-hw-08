@@ -44,38 +44,23 @@
 }
 
 .projects {
-	width: 100%;
-	margin-bottom: -30px;
+	margin: -15px;
 
-	&__item {
-		margin-bottom: 30px;
-	}
-}
-
-@media screen and (min-width: $tablet) {
-	.projects {
+	@media screen and (min-width: $tablet) {
 		display: flex;
-		align-items: center;
 		flex-wrap: wrap;
 	}
-	.projects__item {
-		box-sizing: border-box;
-		width: 354px;
-	}
-}
 
-@media screen and (min-width: $tablet) and (max-width: 1199px) {
-	.projects__item:not(:nth-child(2n)) {
-		margin-right: 30px;
-	}
-}
-
-@media screen and (min-width: $desktop) {
-	.projects__item {
-		width: 370px;
-	}
-	.projects__item:not(:nth-child(3n)) {
-		margin-right: 30px;
+	&__item {
+		margin: 15px;
+		@media screen and (min-width: $tablet) {
+			display: flex;
+			box-sizing: border-box;
+			flex-basis: calc(100% / 2 - 30px);
+		}
+		@media screen and (min-width: $desktop) {
+			flex-basis: calc(100% / 3 - 30px);
+		}
 	}
 }
 
@@ -84,6 +69,7 @@
 		width: 100%;
 	}
 	&__data {
+		flex-grow: 1;
 		padding: 20px 24px;
 		border-left: 1px solid #eeeeee;
 		border-bottom: 1px solid #eeeeee;
@@ -111,14 +97,16 @@
 	}
 }
 
-.projects__data--height {
-	@media screen and (min-width: $tablet) and (max-width: 1199px) {
-		height: 146px;
-	}
-}
+// .projects__data--height {
+// 	@media screen and (min-width: $tablet) and (max-width: 1199px) {
+// 		height: 146px;
+// 	}
+// }
 
 .projects__link {
 	display: block;
+	display: flex;
+	flex-direction: column;
 
 	transition: box-shadow var(--transition-duration) var(--timing-function);
 
@@ -140,7 +128,7 @@
 	align-items: center;
 	background: rgba(33, 150, 243, 0.9);
 
-	transform: translateY(100%);
+	transform: translateY(101%);
 	transition: transform var(--transition-duration) var(--timing-function),
 		opasity var(--transition-duration) var(--timing-function);
 
