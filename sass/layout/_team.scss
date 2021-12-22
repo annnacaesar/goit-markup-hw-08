@@ -51,7 +51,12 @@
 	background-color: #ffffff;
 
 	width: 100%;
-	margin-top: 30px;
+
+	&:not(:last-child) {
+		@media screen and (max-width: 767px) {
+			margin-bottom: 30px;
+		}
+	}
 
 	@media screen and (min-width: $tablet) {
 		flex-basis: calc(100% / 2 - 30px);
@@ -60,7 +65,6 @@
 	@media screen and (min-width: $desktop) {
 		flex-basis: calc(100% / 4 - 30px);
 		width: 270px;
-		// margin-top: 0;
 		margin: 15px;
 	}
 }

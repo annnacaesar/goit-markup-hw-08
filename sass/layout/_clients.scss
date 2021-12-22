@@ -6,6 +6,7 @@
 
 .clients__item {
 	flex-basis: calc(100% / 2 - 30px);
+	height: 92px;
 	margin: 15px;
 
 	@media screen and (min-width: $tablet) {
