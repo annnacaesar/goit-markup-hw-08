@@ -243,8 +243,17 @@
 
 	&:hover,
 	&:focus {
+		color: (--accent-color);
 		border-color: var(--accent-color);
 		fill: var(--accent-color);
 		outline: var(--accent-color);
+	}
+	&::before {
+		font-size: 21px;
+		color: #000000;
+	}
+	&:hover::before,
+	&:focus::before {
+		color: var(--accent-color);
 	}
 }

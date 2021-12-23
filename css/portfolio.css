@@ -596,10 +596,6 @@ body {
   margin-top: 15px;
 }
 
-.projects {
-  margin: -15px;
-}
-
 @media screen and (min-width: 768px) {
   .projects {
     display: -webkit-box;
@@ -607,15 +603,13 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin: -15px;
   }
-}
-
-.projects__item {
-  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
   .projects__item {
+    margin: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -631,6 +625,10 @@ body {
     -ms-flex-preferred-size: calc(100% / 3 - 30px);
         flex-basis: calc(100% / 3 - 30px);
   }
+}
+
+.projects__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .projects__img {

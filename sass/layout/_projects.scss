@@ -44,16 +44,15 @@
 }
 
 .projects {
-	margin: -15px;
-
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		flex-wrap: wrap;
+		margin: -15px;
 	}
 
 	&__item {
-		margin: 15px;
 		@media screen and (min-width: $tablet) {
+			margin: 15px;
 			display: flex;
 			box-sizing: border-box;
 			flex-basis: calc(100% / 2 - 30px);
@@ -62,6 +61,9 @@
 			flex-basis: calc(100% / 3 - 30px);
 		}
 	}
+}
+.projects__item:not(:last-child) {
+	margin-bottom: 30px;
 }
 
 .projects {
@@ -96,12 +98,6 @@
 		overflow: hidden;
 	}
 }
-
-// .projects__data--height {
-// 	@media screen and (min-width: $tablet) and (max-width: 1199px) {
-// 		height: 146px;
-// 	}
-// }
 
 .projects__link {
 	display: block;
