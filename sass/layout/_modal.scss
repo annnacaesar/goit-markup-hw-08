@@ -153,8 +153,12 @@
 	justify-content: center;
 	padding-left: 33px;
 	margin-bottom: 30px;
-	font-size: 12px;
+	font-size: 10px;
 	line-height: 1.16;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 12px;
+	}
 
 	color: #757575;
 
@@ -169,10 +173,14 @@
 	&__policy {
 		text-decoration: underline;
 
-		font-size: 14px;
 		line-height: 1.7;
+		font-size: 12px;
 
 		color: var(--accent-color);
+
+		@media screen and (min-width: $tablet) {
+			font-size: 14px;
+		}
 	}
 }
 
